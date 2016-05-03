@@ -1,0 +1,250 @@
+/* apply a natural box layout model to all elements, but allowing components to change
+(Box Model, http://www.paulirish.com/2012/box-sizing-border-box-ftw/)*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+/*padding en margin op 0 om default spacing in body element te verwijderen.
+Voorkomt dat elementen niet volledig lijnen, zowel links als rechts*/
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.4;
+  background: white;
+  background-size: cover;
+}
+
+.topnav {
+  background-color: white;
+  color: black;
+  text-align: right;
+  position: fixed;
+  top: 0; /* let op positie van topnav is bovenaan pagina, vandaar top 0*/
+  left: 0;
+  right: 0; /* or set width 100% */
+}
+
+.active {
+  color: #FFA07A;
+}
+
+nav a {
+  display: inline-block;
+  padding: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-size: 20px;
+  transition-property:background;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+}
+
+nav a:hover {
+  background: #FFA07A;
+}
+
+
+.logo {
+  font-family: 'Satisfy';
+  font-size: 28px;
+  border: 2px solid #8c9d87;
+  border-radius: 50%;
+  border-color: black;
+  height: 70px;
+  width: 70px;
+  padding:0px;
+  text-align: center;
+  line-height: 70px;
+  float: left;
+  margin: 8px;
+  color: black;
+}
+
+header {
+  text-align: center;
+  padding: 200px 150px 250px 150px; /* top, right, bottom, left */
+  background-image: url(../images/RotterdamSkyline_2.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 125px;
+  font-family: 'Satisfy', cursive;
+  color: #FF6347;
+  text-shadow: 1px 1px 1px #000;
+  padding: 0px;
+  margin: 50px 50px -20px 50px;
+}
+
+header h2 {
+  color: #FFE4C4;
+  margin-top: -10px;
+  text-shadow: 1px 1px 1px #000;
+}
+
+header a {
+  color: #3CB371;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: #FFE4C4;
+}
+
+h2 {
+  font-family: 'Raleway' cursive;
+  font-size: 30px;
+}
+
+.about {
+  color: black;
+  padding: 70px 150px 50px 150px;
+  text-align: justify;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.about a {
+  color: #FF6347;
+}
+
+.content-wrap {
+  width: 750px ;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.content-wrap a {
+  color: #FF6347;
+  text-decoration: none;
+}
+.content-wrap a:hover {
+  color: #3CB371;
+}
+.funfact {
+  background:#FFA07A;
+  background-image: url(../images/monkey.jpg);
+  color: black;
+  font-weight: bold;
+  padding: 100px 150px 100px 150px;
+  text-align: justify;
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.contact {
+  padding: 70px 150px 100px 150px;
+}
+
+.thank-you {
+  color: black;
+  padding: 70px 150px 50px 150px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+/* FOOTER/CONTACT
+-----------------*/
+footer {
+  text-align: center;
+  background: white;
+  padding: 100px 150px 100px 150px;
+}
+
+footer a {
+  color: #FF6347;
+}
+
+footer h1 {
+  color: #FF6347;
+  font-size: 45px;
+}
+/* Social links with only icon fonts */
+.social-horizontal {
+  text-align: center;
+  margin-top: 20px;
+}
+.social-horizontal a {
+  display: inline-block;
+  margin: 10px 50px;
+}
+.social-horizontal i {
+  font-size: 60px;
+  color:#FF6347;
+}
+
+.bottomnav {
+  text-align: center;
+  position: relative; /* let op: alleen topnav is fixed */
+  bottom: 0; /* let op: positie van bottom is bovenaan pagina, vandaar bottom 0*/
+  left: 0;
+  right: 0; /* or set width 100% */
+}
+
+.bottomnav a {
+  display: inline-block;
+  padding: 30px;
+  margin-top: 100px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-size: 15px;
+}
+
+.bottomnav a:hover {
+  color: #FFA07A;
+  background-color: white; /*niet volledig tevreden met deze oplossing om oranje achtergrond te verwijderen tijdens hoveren... */
+}
+
+/* Foto Rotterdam credit */
+.fotocredit {
+  margin-top: 75px;
+  margin-right: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Copyright */
+.copyright {
+  margin-top: 10px;
+  margin-right: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.fotocredit a {
+  color: #FF6347;
+}
+
+.fotocredit a:hover {
+  color: #3CB371;
+}
+
+
+/* CONTACTFORM
+-----------------*/
+
+.contactform {
+  font-family: 'Raleway' cursive;
+  font-size: 16px;
+  margin: 0 auto;
+  width: 800px;
+  /* To see the outline of the form */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
